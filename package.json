@@ -1,0 +1,32 @@
+{
+  "name": "your-project-name",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "deploy": "next build && next export",
+    "test:accessibility": "npm run pa11y || npm run pa11y:report\"",
+    "pa11y": "pa11y-ci --reporter=pa11y-ci-reporter-html --sitemap http://localhost:3000/sitemap.xml",
+    "pa11y:report": "open reports/index.html"
+
+  },
+  "dependencies": {
+    "concurrently": "^8.2.0",
+    "pa11y-ci": "^3.0.1",
+    "pa11y-ci-reporter-html": "^6.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "8.26.0",
+    "eslint-config-next": "13.0.0"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  }
+}
