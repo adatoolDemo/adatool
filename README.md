@@ -31,6 +31,38 @@
   </ul>
 
 <h3>Add a new file with name .pa11y-ci.json</h3>
+<p>add the action according to your work</p>
+{
+    defaults: {
+      standard: WCAG2AA,
+      runners: [
+        axe
+      ],
+      reporters: [
+        cli,
+        [
+          pa11y-ci-reporter-html,
+          {
+            destination: ./reports
+          }
+        ]
+      ],
+      chromeLaunchConfig: {
+              args: [
+                  --no-sandbox
+              ]
+          }
+    },
+   <b> urls: [
+      {
+        url: http://localhost:4200,
+        actions: [
+          navigate to http://localhost:4200
+        ]
+      }
+    ]
+    </b>
+  }
 <p>Please find the the file and add the config in URLs</p>
 
 <h3>Run Npm accessibility command</h3>
