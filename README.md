@@ -1,5 +1,11 @@
- <h2>Basic process of Calling Pa11y from Local Project to check</h2>
-  <h3>Add in Package.Json</h3>
+ <h2>Basic Integration process with ADA Tool</h2>
+   <h3>Run the NPM install</h3>
+  <ul>
+    <li>
+        npm install
+    </li>
+  </ul>
+  <h4>Within Package.Json, Below is a list of packages that should be available</h4>
   <ul>
     <li>
         "pa11y": "^6.2.3",
@@ -10,49 +16,27 @@
     <li>
         "pa11y-ci-reporter-html": "^5.0.4"
     </li>
-  </ul>
-  <h3>Run the NPM install</h3>
-  <ul>
     <li>
-        npm install
-    </li>
-  </ul>
-  <h3>Add in Package.Json Script</h3>
-  <ul>
-    <li>
-        "accessibility": "npm run pa11y || npm run pa11y:report\""
-    </li>
-    <li>
-        "pa11y": "pa11y-ci --config .pa11y-ci.json"
-    </li>
-    <li>
-        "pa11y:report": "open reports/index.html"
+       "concurrently": "^7.6.0"
     </li>
   </ul>
 
-<h3>Add a new file with name .pa11y-ci.json</h3>
-<p>add the action according to your work</p>
-{
-    defaults: {
-      standard: WCAG2AA,
-      runners: [
-        axe
-      ],
-      reporters: [
-        cli,
-        [
-          pa11y-ci-reporter-html,
-          {
-            destination: ./reports
-          }
-        ]
-      ],
-      chromeLaunchConfig: {
-              args: [
-                  --no-sandbox
-              ]
-          }
-    },
+  <h3>Run NPM Command</h3>
+  <ul>
+   <li>npm run Adatest</li>
+  </ul>
+  <h4>The commands listed below should be available in the script</h4>
+  <ul>
+   <li>"accessibilityTest": "npm run pa11y || npm run pa11y:report\""</li>
+   <li>"pa11y": "pa11y-ci --config pa11y-ci.json"</li>
+   <li>"pa11y:report": "start reports/index.html"</li>
+   <li>"pa11y:reportLinux": "open reports/index.html" <b><i> This command is for Linux system </i></b></li>
+   <li>"Adatest": "concurrently \"npm start\" \"npm run pa11y || npm run pa11y:report\""</li>
+  </ul>
+
+  <h2>Update pa11y-ci.json Config File</h2>
+  <ul>
+   <li>Update URLs as per projects urls</li>
    <b> urls: [
       {
         url: http://localhost:4200,
@@ -62,9 +46,4 @@
       }
     ]
     </b>
-  }
-<p>Please find the the file and add the config in URLs</p>
-
-<h3>Run Npm accessibility command</h3>
-<p>npm run accessibility  - run it in different terminal</p>
-<p>Download from Report folder</p>
+  </ul>
