@@ -47,3 +47,7 @@
     ]
     </b>
   </ul>
+<h2>Configure pa11y in Project – using Sitemap</h2>
+<ul>
+ <li>Note: http://localhost:3000/sitemap.xml is your local sitemap url.</li>
+</ul>
