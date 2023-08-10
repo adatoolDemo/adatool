@@ -1,0 +1,30 @@
+{
+    "defaults": {
+      "standard": "WCAG2AA",
+      "runners": [
+        "axe"
+      ],
+      "reporters": [
+        "cli",
+        [
+          "pa11y-ci-reporter-html",
+          {
+            "destination": "./reports"
+          }
+        ]
+      ],
+      "chromeLaunchConfig": {
+              "args": [
+                  "--no-sandbox"
+              ]
+          }
+    },
+    "urls": [
+      {
+        "url": "http://localhost:4200",
+        "actions": [
+          "navigate to http://localhost:4200"
+        ]
+      }
+    ]
+  }
