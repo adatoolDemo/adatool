@@ -11,7 +11,7 @@
     "pa11y": "pa11y-ci --config pa11y-ci.json",
     "pa11y:report": "start reports/index.html",
     "pa11y:reportLinux": "open reports/index.html",
-    "Pallytest": "concurrently \"npm start\" \"npm run pa11y || npm run pa11y:report\""
+    "Adatest": "concurrently \"npm start\" \"npm run pa11y || npm run pa11y:report\""
   },
   "private": true,
   "dependencies": {
