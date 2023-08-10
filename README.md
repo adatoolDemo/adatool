@@ -50,4 +50,6 @@
 <h2>Configure pa11y in Project – using Sitemap</h2>
 <ul>
  <li>Note: http://localhost:3000/sitemap.xml is your local sitemap url.</li>
+     "pa11ySiteMap":"pa11y-ci --reporter=pa11y-ci-reporter-html --sitemap http://localhost:3000/sitemap.xml"
+ <li>Replace pa11y in Adatest </li>
 </ul>
