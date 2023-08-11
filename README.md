@@ -58,6 +58,5 @@
     <li> "pa11y:reportSitemap": "start pa11y-ci-report/index.html",</li>
     <li> "sleep10s": "node -e \"setTimeout(() => process.exit(0), 10000)\"",</li>
     <li> "AdatestSiteMap": "concurrently \"node scripts/generate_sitemap.js && npm run dev\" \"npm run sleep10s && npm run pa11ySiteMap && npm run pa11y:reportSitemap\""</li>
-    <li>Replace pa11y in Adatest </li>
     <li>Note: http://localhost:3000/sitemap.xml is your local sitemap url.</li>
 </ul>
