@@ -48,8 +48,16 @@
     </b>
   </ul>
 <h2>Configure pa11y in Project – using Sitemap</h2>
+<h3>Run NPM Command</h3>
+  <ul>
+   <li>npm run AdatestSiteMap</li>
+  </ul>
+<h4>The commands listed below should be available in the script</h4>
 <ul>
- <li>Note: http://localhost:3000/sitemap.xml is your local sitemap url.</li>
-     "pa11ySiteMap":"pa11y-ci --reporter=pa11y-ci-reporter-html --sitemap http://localhost:3000/sitemap.xml"
- <li>Replace pa11y in Adatest </li>
+    <li> "pa11ySiteMap": "pa11y-ci --reporter=pa11y-ci-reporter-html --sitemap http://localhost:3000/sitemap.xml",</li>
+    <li> "pa11y:reportSitemap": "start pa11y-ci-report/index.html",</li>
+    <li> "sleep10s": "node -e \"setTimeout(() => process.exit(0), 10000)\"",</li>
+    <li> "AdatestSiteMap": "concurrently \"node scripts/generate_sitemap.js && npm run dev\" \"npm run sleep10s && npm run pa11ySiteMap && npm run pa11y:reportSitemap\""</li>
+    <li>Replace pa11y in Adatest </li>
+    <li>Note: http://localhost:3000/sitemap.xml is your local sitemap url.</li>
 </ul>
