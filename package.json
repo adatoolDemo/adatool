@@ -2,11 +2,6 @@
   "name": "adatool-demo",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
     "accessibilityTest": "npm run pa11y || npm run pa11y:report\"",
     "pa11y": "pa11y-ci --config pa11y-ci.json",
     "pa11y:report": "start reports/index.html",
