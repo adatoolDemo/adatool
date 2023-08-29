@@ -23,7 +23,7 @@
 
   <h3>Run NPM Command</h3>
   <ul>
-   <li>npm run Adatest</li>
+   <li>npm run adatest</li>
   </ul>
   <h4>The commands listed below should be available in the script</h4>
   <ul>
@@ -31,7 +31,7 @@
    <li>"pa11y": "pa11y-ci --config pa11y-ci.json"</li>
    <li>"pa11y:report": "start reports/index.html"</li>
    <li>"pa11y:reportLinux": "open reports/index.html" <b><i> This command is for Linux system </i></b></li>
-   <li>"Adatest": "concurrently \"npm start\" \"npm run pa11y || npm run pa11y:report\""</li>
+   <li>"adatest": "npm run pa11y || npm run pa11y:report\""</li>
   </ul>
 
   <h2>Update pa11y-ci.json Config File</h2>
