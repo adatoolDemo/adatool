@@ -1,0 +1,26 @@
+{
+  "name": "adatool-demo",
+  "version": "0.0.0",
+  "scripts": {
+    "accessibilityTest": "npm run pa11y || npm run pa11y:report\"",
+    "pa11y": "pa11y-ci --config pa11y-ci.json",
+    "pa11y:report": "start reports/index.html",
+    "pa11y:reportLinux": "open reports/index.html",
+    "adatest": "npm run pa11y || npm run pa11y:report\""
+  },
+  "private": true,
+  "dependencies": {
+    "pa11y": "^6.2.3",
+    "pa11y-ci": "^3.0.1",
+    "pa11y-ci-reporter-html": "^5.0.4",
+    "path": "^0.12.7",
+    "path-browserify": "^1.0.1",
+    "zone.js": "~0.11.4",
+    "concurrently": "^7.6.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "pa11y-ci": "^3.0.1",
+    "pa11y-ci-reporter-html": "^5.0.4"
+  }
+}
